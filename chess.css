@@ -1,0 +1,92 @@
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+@media screen and (max-width: 1001px) {
+
+    #chess-board{
+        font-size: 4rem;
+        height: 40vh;
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: black;
+        border-top: 0.75rem inset #030303;
+        border-right: 0.75rem inset #353535;
+        border-bottom: 0.75rem inset #6b6b6b;
+        border-left: 0.75rem inset #131313;
+    }
+   
+    
+  }
+  @media screen and (min-width: 1000px) {
+    #chess-board{
+        font-size: 6rem;
+        height: 80vh;
+        width:80vw;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: black;
+        border-top: 1.5rem inset #030303;
+        border-right: 1.5rem inset #353535;
+        border-bottom: 1.5rem inset #6b6b6b;
+        border-left: 1.5rem inset #131313;
+    }
+   
+    
+  }
+  
+
+.white-square{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:12.5%;
+    height: 12.5%;
+    background-color: azure;
+    background-image: radial-gradient(circle, #f9f3ee, #e0d9d1, #c7bfb6, #aea69a, #968e80);
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: #000000;
+}
+
+.black-square{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:12.5%;
+    height: 12.5%;
+    background-color: rgb(0,155,255);  
+    background-image: radial-gradient(circle, #0064ff, #0051c8, #003d93, #00295f, #021530);
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: #000000;
+    
+}
+
+.white{
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-fill-color: #ffffff;
+}
+
+.black{
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: #000000;
+}
+
+.black-square:hover{
+    background-image: radial-gradient(circle, #fff700, #ebee4d, #f4f812, #011937, #010914);
+    box-shadow: inset 0px 0px 0px 0.30rem black;
+}
+
+.white-square:hover{
+    background-image: radial-gradient(circle, #fff700, #ebee4d, #f4f812, #cfcbcb, #e6e5e4);
+    box-shadow: inset 0px 0px 0px 0.30rem black;
+}
+
