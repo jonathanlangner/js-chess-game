@@ -6,9 +6,37 @@ body{
 
 @media screen and (max-width: 1001px) {
 
-    #chess-board{
-        font-size: 4rem;
+    #menu{
+        text-shadow: 2px 2px #000000;
+        background-image: radial-gradient(circle, #0064ff, #0051c8, #003d93, #00295f, #021530); 
+        font-size: 2rem;
         height: 40vh;
+        width:80vw;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        color:white;
+    }
+    #menu div{
+        width: 100%;
+    }
+    #menu button{
+        box-shadow: 2px 4px #000000;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+        height: 4rem;
+        width: 6rem;
+        font-weight: 900;
+        background-image: radial-gradient(circle, #f8f8f8, #e4e3e2, #d0cdca, #c7c4c0, #b1b0ad);
+    }
+    #menu button:hover{
+        background-image: radial-gradient(circle, #ffffff, #eaeaea, #e6e6e6, #cbcbcb, #e4e4e3);
+        border: solid 6px black;
+    }
+
+    #chess-board{
+        font-size: 3rem;
+        height:80%;
         width:100%;
         display: flex;
         flex-wrap: wrap;
@@ -22,8 +50,37 @@ body{
     
   }
   @media screen and (min-width: 1000px) {
-    #chess-board{
+    #menu{
+        text-shadow: 5px 5px #000000;
+        background-image: radial-gradient(circle, #0064ff, #0051c8, #003d93, #00295f, #021530); 
         font-size: 6rem;
+        height: 80vh;
+        width:80vw;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        color:white;
+    }
+    #menu div{
+        width: 100%;
+        height: 18rem;
+    }
+    #menu button{
+        box-shadow: 2px 4px #000000;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 2rem;
+        font-weight: 900;
+        height: 6rem;
+        width: 12rem;
+        background-image: radial-gradient(circle, #f8f8f8, #e4e3e2, #d0cdca, #c7c4c0, #b1b0ad);
+    }
+
+    #menu button:hover{
+        background-image: radial-gradient(circle, #ffffff, #eaeaea, #e6e6e6, #cbcbcb, #e4e4e3);
+        border: solid 6px black;
+    }
+    #chess-board{
+        font-size: 5rem;
         height: 80vh;
         width:80vw;
         display: flex;
@@ -38,13 +95,12 @@ body{
     
   }
   
-
-.white-square{
+  .white-square{
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    width:12.5%;
+    width: 12.5%;
     height: 12.5%;
     background-color: azure;
     background-image: radial-gradient(circle, #f9f3ee, #e0d9d1, #c7bfb6, #aea69a, #968e80);
@@ -52,19 +108,71 @@ body{
     -webkit-text-stroke-color: #ffffff;
     -webkit-text-fill-color: #000000;
 }
-
 .black-square{
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    width:12.5%;
+    width: 12.5%;
     height: 12.5%;
     background-color: rgb(0,155,255);  
     background-image: radial-gradient(circle, #0064ff, #0051c8, #003d93, #00295f, #021530);
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: #ffffff;
     -webkit-text-fill-color: #000000;
+}
+  .white-square-10{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 10%;
+    background-color: azure;
+    background-image: radial-gradient(circle, #f9f3ee, #e0d9d1, #c7bfb6, #aea69a, #968e80);
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: #000000;
+}
+.black-square-10{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 10%;
+    background-color: rgb(0,155,255);  
+    background-image: radial-gradient(circle, #0064ff, #0051c8, #003d93, #00295f, #021530);
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: #000000;
+}
+.white-square-16{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.25%;
+    height: 6.25%;
+    background-color: azure;
+    background-image: radial-gradient(circle, #f9f3ee, #e0d9d1, #c7bfb6, #aea69a, #968e80);
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #ffffff;
+    
+}
+
+.black-square-16{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.25%;
+    height: 6.25%;
+    background-color: rgb(0,155,255);  
+    background-image: radial-gradient(circle, #0064ff, #0051c8, #003d93, #00295f, #021530);
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #ffffff;
+    
     
 }
 
@@ -78,15 +186,31 @@ body{
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #ffffff;
     -webkit-text-fill-color: #000000;
+   
 }
 
-.black-square:hover{
+.black-square:hover, .black-square-10:hover, .black-square-16:hover {
     background-image: radial-gradient(circle, #fff700, #ebee4d, #f4f812, #011937, #010914);
     box-shadow: inset 0px 0px 0px 0.30rem black;
 }
 
-.white-square:hover{
+.white-square:hover, .white-square-10:hover, .white-square-16:hover{
     background-image: radial-gradient(circle, #fff700, #ebee4d, #f4f812, #cfcbcb, #e6e5e4);
     box-shadow: inset 0px 0px 0px 0.30rem black;
 }
 
+
+.black-square-clicked{
+    background-image: radial-gradient(circle, #fff700, #ebee4d, #f4f812, #011937, #010914);
+    box-shadow: inset 0px 0px 0px 0.30rem black;
+}
+
+.white-square-clicked{
+    background-image: radial-gradient(circle, #fff700, #ebee4d, #f4f812, #cfcbcb, #e6e5e4);
+    box-shadow: inset 0px 0px 0px 0.30rem black;
+} 
+
+.possible-move{
+    background-image: radial-gradient(circle, #ffffff, #e5e2e2, #b0b0b0, #000000, #000000);
+    box-shadow: inset 0px 0px 0px 0.30rem black;
+}

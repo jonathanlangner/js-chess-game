@@ -4,84 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>&#9823; Chess &#9823;</title>
+    <title>&#9823; Granular Chess &#9823;</title>
     <link rel="stylesheet" href="chess.css">
-    <!-- <script src="chess.js" defer></script> -->
+    <script src="chess.js" defer></script>
 </head>
 <body>
-    <!--!HTML & CSS Graphical Layout for a Chess Board.-->
-    <section id="chess-board">
-        <div class="white-square black rook" id="a8">&#9820;</div>
-        <div class="black-square black knight" id="b8">&#9822;</div>
-        <div class="white-square black bishop" id="c8">&#9821;</div>
-        <div class="black-square black queen" id="d8">&#9819;</div>
-        <div class="white-square black king" id="e8">&#9818;</div>
-        <div class="black-square black bishop" id="f8">&#9821;</div>
-        <div class="white-square black knight" id="g8">&#9822;</div>
-        <div class="black-square black rook" id="h8">&#9820;</div>
 
-        <div class="black-square black pawn" id="a7">&#9823;</div>
-        <div class="white-square black pawn" id="b7">&#9823;</div>
-        <div class="black-square black pawn" id="c7">&#9823;</div>
-        <div class="white-square black pawn" id="d7">&#9823;</div>
-        <div class="black-square black pawn" id="e7">&#9823;</div>
-        <div class="white-square black pawn" id="f7">&#9823;</div>
-        <div class="black-square black pawn" id="g7">&#9823;</div>
-        <div class="white-square black pawn" id="h7">&#9823;</div>
+    <section id="menu">
+        <h2 title="Granular Chess" style="text-align: center; width: 100%;">Granular Chess</h2>
+        <h4 title="Play" style="height: 6rem; width: 100%; margin-top:2rem; margin-bottom:2rem; text-align: center;">Play</h4>
+        <div style="height:10rem; text-align: center; margin-top:0rem; margin-bottom: 2rem; width: 100%;">
+            <button title="Play Standard Chess" onclick="runGameStandard()">Standard Chess</button>
+            <button title="Play 10x10 Chess" onclick="runGame10()">10x10 Chess</button>
+            <button title="Play 16x16 Chess" onclick="runGame16()">16x16 Chess</button>
+        </div>
 
-        <div class="white-square" id="a6"></div>
-        <div class="black-square" id="b6"></div>
-        <div class="white-square" id="c6"></div>
-        <div class="black-square" id="d6"></div>
-        <div class="white-square" id="e6"></div>
-        <div class="black-square" id="f6"></div>
-        <div class="white-square" id="g6"></div>
-        <div class="black-square" id="h6"></div>
-
-        <div class="black-square" id="a5"></div>
-        <div class="white-square" id="b5"></div>
-        <div class="black-square" id="c5"></div>
-        <div class="white-square" id="d5"></div>
-        <div class="black-square" id="e5"></div>
-        <div class="white-square" id="f5"></div>
-        <div class="black-square" id="g5"></div>
-        <div class="white-square" id="h5"></div>
-
-        <div class="white-square" id="a4"></div>
-        <div class="black-square" id="b4"></div>
-        <div class="white-square" id="c4"></div>
-        <div class="black-square" id="d4"></div>
-        <div class="white-square" id="e4"></div>
-        <div class="black-square" id="f4"></div>
-        <div class="white-square" id="g4"></div>
-        <div class="black-square" id="h4"></div>
-
-        <div class="black-square" id="a3"></div>
-        <div class="white-square" id="b3"></div>
-        <div class="black-square" id="c3"></div>
-        <div class="white-square" id="d3"></div>
-        <div class="black-square" id="e3"></div>
-        <div class="white-square" id="f3"></div>
-        <div class="black-square" id="g3"></div>
-        <div class="white-square" id="h3"></div>
-
-        <div class="white-square white pawn" id="a2">&#9823;</div>
-        <div class="black-square white pawn" id="b2">&#9823;</div>
-        <div class="white-square white pawn" id="c2">&#9823;</div>
-        <div class="black-square white pawn" id="d2">&#9823;</div>
-        <div class="white-square white pawn" id="e2">&#9823;</div>
-        <div class="black-square white pawn" id="f2">&#9823;</div>
-        <div class="white-square white pawn" id="g2">&#9823;</div>
-        <div class="black-square white pawn" id="h2">&#9823;</div>
-
-        <div class="black-square white rook" id="a1">&#9820;</div>
-        <div class="white-square white knight" id="b1">&#9822;</div>
-        <div class="black-square white bishop" id="c1">&#9821;</div>
-        <div class="white-square white queen" id="d1">&#9819;</div>
-        <div class="black-square white king" id="e1">&#9818;</div>
-        <div class="white-square white bishop" id="f1">&#9821;</div>
-        <div class="black-square white knight" id="g1">&#9822;</div>
-        <div class="white-square white rook" id="h1">&#9820;</div>
     </section>
+
+    <section style="height: 20%; width:100%; text-align:center; margin-bottom:5rem; ">
+        <h1>Turn: Player One's Turn</h1>
+    </section>
+    <!--!HTML & CSS Graphical Layout for a Chess Board.-->
+    <section id="chess-board" style="display: none;">
+
+    </section>
+
 </body>
 </html>
